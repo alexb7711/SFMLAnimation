@@ -4,6 +4,7 @@ SFMLFLAGS  = -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system
 WFLAGS = -Wall -g
 
 SRC    = main.cpp \
+	 ObjectManager.cpp\
 	 ResourceHandler/ResourceHandler.cpp \
 
 OBJ    = $(SRC:.c=.o)

@@ -24,11 +24,11 @@ int main()
 {
     sf::RenderWindow window(sf::VideoMode(640, 480), "SFML works!");
 
-    sf::Texture texture;
-    texture.loadFromFile("SpriteSheet.png");
+    ResourceHandler* rh = ResourceHandler::getPtr();
+    rh->texture.add("SpriteSheet");
 
     sf::IntRect rectSourceSprite(0, 0, 192, 192);
-    sf::Sprite  sprite(texture, rectSourceSprite);
+    sf::Sprite  sprite(rh->texture.get("SpriteSheet"), rectSourceSprite);
 
     sf::Clock clock;
 
