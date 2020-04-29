@@ -41,8 +41,6 @@ void ObjectManager<Object>::spawnObject(unsigned amount)
   for(unsigned i = 0; i < amount; ++i)
     m_object.push_back(new Object);
 
-//===============================================================================
-//
   return;
 }  
 
@@ -66,5 +64,19 @@ void ObjectManager<Object>::deleteObject(unsigned amount, unsigned index)
 //===============================================================================
 //
 template <class Object>
+void ObjectManager<Object>::wipeObjects()
+{
+  // Clear and release memory
+  m_object.clear();
+  std::vector<Object>().swap(m_object);
+  return;
+}
+
+//===============================================================================
+//
+template <class Object>
 ObjectManager<Object>::~ObjectManager()
-{}
+{
+  wipeObjects();
+  return;
+}

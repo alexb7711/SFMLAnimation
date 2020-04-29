@@ -32,6 +32,7 @@ class ObjectManager
     void spawnObject(unsigned amount);
     void deleteObject(unsigned amount);
     void deleteObject(unsigned amount, unsigned index);
+    void wipeObjects();
 
     ~ObjectManager();
     

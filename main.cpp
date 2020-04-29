@@ -19,6 +19,7 @@
 #include <SFML/Graphics.hpp>
 
 #include "ResourceHandler/ResourceHandler.hpp"
+#include "AnimatedSprite.hpp"
 
 int main()
 {
@@ -27,8 +28,20 @@ int main()
     ResourceHandler* rh = ResourceHandler::getPtr();
     rh->texture.add("SpriteSheet");
 
-    sf::IntRect rectSourceSprite(0, 0, 192, 192);
-    sf::Sprite  sprite(rh->texture.get("SpriteSheet"), rectSourceSprite);
+    std::vector<sf::IntRect> dragonWalk;
+    dragonWalk.push_back(sf::IntRect(0, 0, 192, 192));
+    dragonWalk.push_back(sf::IntRect(192, 0, 192, 192));
+    dragonWalk.push_back(sf::IntRect(384, 0, 192, 192));
+    dragonWalk.push_back(sf::IntRect(192, 0, 192, 192));
+
+//    dragonWalk.push_back(sf::IntRect(576, 0, 192, 192));
+//    dragonWalk.push_back(sf::IntRect(384, 0, 192, 192));
+
+//    AnimatedSprite dragon(rh->texture.get("SpriteSheet"));
+   AnimatedSprite dragon(rh->texture.get("SpriteSheet"), dragonWalk);
+
+  sf::IntRect rectSourceSprite(0, 0, 192, 192);
+  sf::Sprite  sprite(rh->texture.get("SpriteSheet"), rectSourceSprite);
 
     sf::Clock clock;
 
@@ -41,22 +54,29 @@ int main()
                 window.close();
         }
 
-        if(clock.getElapsedTime().asSeconds() > 1.0f)
-        {
-          if (rectSourceSprite.left == 384)   
-          {
-            rectSourceSprite.left = 0;
-          }
-          else
-            rectSourceSprite.left += 192;
-        
-          clock.restart();
-        }
+//    if(clock.getElapsedTime().asSeconds() > 1.0f)
+//    {
+//       if (rectSourceSprite.left == 384)   
+//       {
+//         rectSourceSprite.left = 0;
+//       }
+//       else
+//         rectSourceSprite.left += 192;
+//     
+//       clock.restart();
+//    }
+//
+//    sprite.setTextureRect(rectSourceSprite);
+       
+      if(clock.getElapsedTime().asSeconds() > 0.25f)
+      {
+         dragon.update();
+        clock.restart();
+      }
 
-        sprite.setTextureRect(rectSourceSprite);
-
-        window.clear();
-        window.draw(sprite);
+       window.clear();
+       dragon.render(&window);
+//       window.draw(sprite);
         window.display();
 
     }
