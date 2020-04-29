@@ -1,0 +1,49 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/a3c87ab5/
+$(TARGET)	makefile	/^$(TARGET): $(OBJ)$/;"	t
+Animate	Animate.hpp	/^class Animate$/;"	c
+CC	makefile	/^CC     = g++$/;"	m
+OBJ	makefile	/^OBJ    = $(SRC:.c=.o)$/;"	m
+ResourceContainer	ResourceHandler/ResourceContainer.hpp	/^    ResourceContainer()$/;"	f	class:ResourceContainer
+ResourceContainer	ResourceHandler/ResourceContainer.hpp	/^    ResourceContainer(const std::string folder, const std::string extension):$/;"	f	class:ResourceContainer
+ResourceContainer	ResourceHandler/ResourceContainer.hpp	/^class ResourceContainer$/;"	c
+ResourceHandler	ResourceHandler/ResourceHandler.cpp	/^ResourceHandler::ResourceHandler():$/;"	f	class:ResourceHandler
+ResourceHandler	ResourceHandler/ResourceHandler.hpp	/^class ResourceHandler$/;"	c
+SRC	makefile	/^SRC    = main.cpp \\$/;"	m
+SessionLoad	Session.vim	/^let SessionLoad = 1$/;"	v
+TARGET	makefile	/^TARGET = example$/;"	m
+WFLAGS	makefile	/^WFLAGS = -Wall -g$/;"	m
+_ANIMATE_H_	Animate.hpp	/^#define _ANIMATE_H_$/;"	d
+_RESOURCE_CONTAINER_HPP_	ResourceHandler/ResourceContainer.hpp	/^#define _RESOURCE_CONTAINER_HPP_ /;"	d
+_RESOURCE_HANDLER_HPP_	ResourceHandler/ResourceHandler.hpp	/^#define _RESOURCE_HANDLER_HPP_ /;"	d
+add	ResourceHandler/ResourceContainer.hpp	/^    void add(const std::string& name)$/;"	f	class:ResourceContainer	typeref:typename:void
+clean	makefile	/^clean:$/;"	t
+exists	ResourceHandler/ResourceContainer.hpp	/^    bool exists (const std::string& name)$/;"	f	class:ResourceContainer	typeref:typename:bool
+font	ResourceHandler/ResourceHandler.hpp	/^    ResourceContainer<sf::Font>        font;$/;"	m	class:ResourceHandler	typeref:typename:ResourceContainer<sf::Font>
+get	ResourceHandler/ResourceContainer.hpp	/^    const Resource& get(const std::string& name)$/;"	f	class:ResourceContainer	typeref:typename:const Resource &
+getFullName	ResourceHandler/ResourceContainer.hpp	/^    std::string getFullName(const std::string& name)$/;"	f	class:ResourceContainer	typeref:typename:std::string
+getPtr	ResourceHandler/ResourceHandler.cpp	/^ResourceHandler* ResourceHandler::getPtr()$/;"	f	class:ResourceHandler	typeref:typename:ResourceHandler *
+m_extension	ResourceHandler/ResourceContainer.hpp	/^    const std::string m_extension;$/;"	m	class:ResourceContainer	typeref:typename:const std::string
+m_folder	ResourceHandler/ResourceContainer.hpp	/^    const std::string m_folder;$/;"	m	class:ResourceContainer	typeref:typename:const std::string
+m_resource	ResourceHandler/ResourceContainer.hpp	/^    std::map<std::string, Resource> m_resource;$/;"	m	class:ResourceContainer	typeref:typename:std::map<std::string,Resource>
+main	main.cpp	/^int main()$/;"	f	typeref:typename:int
+music	ResourceHandler/ResourceHandler.hpp	/^    ResourceContainer<sf::Music>       music;$/;"	m	class:ResourceHandler	typeref:typename:ResourceContainer<sf::Music>
+remove	ResourceHandler/ResourceContainer.hpp	/^    void remove (const std::string& name)$/;"	f	class:ResourceContainer	typeref:typename:void
+s:l	Session.vim	/^let s:l = 100 - ((60 * winheight(0) + 30) \/ 61)$/;"	v
+s:l	Session.vim	/^let s:l = 23 - ((11 * winheight(0) + 15) \/ 30)$/;"	v
+s:l	Session.vim	/^let s:l = 31 - ((22 * winheight(0) + 30) \/ 61)$/;"	v
+s:l	Session.vim	/^let s:l = 41 - ((22 * winheight(0) + 15) \/ 30)$/;"	v
+s:l	Session.vim	/^let s:l = 6 - ((5 * winheight(0) + 30) \/ 61)$/;"	v
+s:l	Session.vim	/^let s:l = 8 - ((7 * winheight(0) + 30) \/ 61)$/;"	v
+s:so_save	Session.vim	/^let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0$/;"	v
+s:sx	Session.vim	/^let s:sx = expand("<sfile>:p:r")."x.vim"$/;"	v
+s:wipebuf	Session.vim	/^  let s:wipebuf = bufnr('%')$/;"	v
+soundBuffer	ResourceHandler/ResourceHandler.hpp	/^    ResourceContainer<sf::SoundBuffer> soundBuffer;$/;"	m	class:ResourceHandler	typeref:typename:ResourceContainer<sf::SoundBuffer>
+texture	ResourceHandler/ResourceHandler.hpp	/^    ResourceContainer<sf::Texture>     texture;$/;"	m	class:ResourceHandler	typeref:typename:ResourceContainer<sf::Texture>
+~ResourceContainer	ResourceHandler/ResourceContainer.hpp	/^    ~ResourceContainer()$/;"	f	class:ResourceContainer
